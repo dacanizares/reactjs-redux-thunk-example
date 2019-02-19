@@ -1,7 +1,7 @@
 import React from 'react'
 import { Spinner } from 'reactstrap'
 
-function dataFetcher(WrappedComponent) {
+function withLoading(WrappedComponent) {
   return class extends React.Component {
     componentDidMount() {
       this.props.fetchData()
@@ -24,4 +24,4 @@ function dataFetcher(WrappedComponent) {
 }
 
 
-export default dataFetcher;
+export default withLoading;
