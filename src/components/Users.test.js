@@ -22,7 +22,7 @@ it('renders correctly', () => {
   }];
 
   const tree = renderer
-    .create(<Users usersList={userList} fetchUsers={fecth} />)
+    .create(<Users usersData={userList} fetchData={fecth} />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

@@ -1,6 +1,7 @@
-import UsersComponent from '../components/UsersComponent';
+import withLoading from '../wrappers/withLoading';
 import { fetchUsers } from '../actions'
 import { connect } from 'react-redux';
+import Users from '../components/Users';
 
 const mapStateToProps = (state) => ({
     usersData: state.users.usersData,
@@ -9,7 +10,7 @@ const mapStateToProps = (state) => ({
 
 const UsersContainer = connect(
     mapStateToProps,
-    { fetchUsers }
-)(UsersComponent)
+    { fetchData: fetchUsers }
+)(withLoading(Users))
 
 export default UsersContainer

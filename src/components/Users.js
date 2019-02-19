@@ -2,12 +2,12 @@ import React from 'react'
 import User from './User'
 import { Row, Col, CardDeck } from 'reactstrap'
 
-const Users = ({usersList, fetchUsers}) =>  {   
+const Users = ({usersData, fetchData}) =>  {   
   return (
     <>
       <Row>
         <CardDeck>
-          {usersList.map((user) => 
+          {usersData.map((user) => 
             <User 
               email={user.email} 
               name={`${user.name.title} ${user.name.last}`} 
@@ -21,7 +21,7 @@ const Users = ({usersList, fetchUsers}) =>  {
         <Col xs='12'>
           <button 
             className='btn btn-primary btn-lg' 
-            onClick={() => fetchUsers()} >
+            onClick={() => fetchData()} >
             Update
           </button>
         </Col>

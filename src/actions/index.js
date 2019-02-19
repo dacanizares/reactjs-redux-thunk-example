@@ -1,5 +1,5 @@
-import {UsersActionTypes} from '../reducers'
-import UsersApi from '../api/UsersApi'
+import { UsersActionTypes } from '../reducers'
+import { findUsers } from '../api/UsersApi'
 
 export const fetchingUsers = () => ({
   type: UsersActionTypes.FETCHING_USERS
@@ -12,7 +12,6 @@ export const receiveUsers = (usersData) => ({
 
 export const fetchUsers = () => async (dispatch) =>  {
   dispatch(fetchingUsers())
-  const usersApi = new UsersApi()
-  const users = await usersApi.find()
+  const users = await findUsers()
   dispatch(receiveUsers(users))    
 }
