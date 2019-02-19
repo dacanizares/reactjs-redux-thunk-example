@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="row"
+  >
+    <div
+      className="card-deck"
+    >
+      <User
+        avatarUrl="image here"
+        email="email@test.com"
+        name="mr undefined"
+      />
+    </div>
+  </div>,
+  <div
+    className="mt-3 row"
+  >
+    <div
+      className="col-12"
+    >
+      <button
+        className="btn btn-primary btn-lg"
+        onClick={[Function]}
+      >
+        Update
+      </button>
+    </div>
+  </div>,
+]
+`;
