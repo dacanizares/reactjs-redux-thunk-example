@@ -26,3 +26,9 @@ it('renders correctly', () => {
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+
+it('fails when no wrong type of data was given', () => {
+  expect(() => renderer
+  .create(<Users usersData={{}} />)).toThrowError();
+});
