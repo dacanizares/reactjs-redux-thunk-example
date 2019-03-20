@@ -28,7 +28,7 @@ it('renders correctly', () => {
 });
 
 
-it('fails when no wrong type of data was given', () => {
+it('fails when wrong type of data is given', () => {
   expect(() => renderer
   .create(<Users usersData={{}} />)).toThrowError();
 });
