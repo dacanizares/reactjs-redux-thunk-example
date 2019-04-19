@@ -7,7 +7,7 @@ export const fetchingUsers = () => ({
 
 export const receiveUsers = (usersData) => ({
   type: UsersActionTypes.RECEIVE_USERS,
-  usersData: usersData
+  payload: usersData
 })
 
 export const fetchUsers = () => async (dispatch) =>  {

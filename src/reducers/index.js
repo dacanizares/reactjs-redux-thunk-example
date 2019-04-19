@@ -19,7 +19,7 @@ const users = (state = { usersData: [], loading: false }, action) => {
     case UsersActionTypes.RECEIVE_USERS:
     return {
       ...state,
-      usersData: action.usersData,
+      usersData: action.payload,
       loading: false
     }
   
